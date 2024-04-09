@@ -2,7 +2,7 @@ import msprime
 import sys
 
 # This script is designed to run from the command line, taking 7 arguments
-# Usage: python 3_sim_no_mig.py 10000 2e-8 1e-8 1e5 100 1
+# Usage: python 3_sim_no_mig.py 10000 2e-8 1e-8 1e5 10 1
 # Parameters examples from: https://popsim-consortium.github.io/stdpopsim-docs/stable/catalog.html
 
 # Check if the correct number of arguments was provided
@@ -34,3 +34,4 @@ filename_prefix = f"msprime_NoMig_ID_{sim_id}_samples_size_{samples_size}_chrlen
 ts_sim.dump(f"{filename_prefix}.trees")
 with open(f"{filename_prefix}.vcf", "w") as vcf_file:
     ts_sim.write_vcf(vcf_file)
+

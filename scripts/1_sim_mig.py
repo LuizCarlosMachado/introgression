@@ -2,7 +2,7 @@ import msprime
 import sys
 
 # This script is now designed to run from the command line, taking 10 arguments
-# Usage: python 1_sim_mig.py 10000 10000 10000 5000 0.029 2e-8 1e-8 1e5 100 1
+# Usage: python 1_sim_mig.py 10000 10000 10000 5000 0.029 2e-8 1e-8 1e4 10 1
 # Parameters examples from: https://popsim-consortium.github.io/stdpopsim-docs/stable/catalog.html#sec_catalog_homsap_models_outofafrica_3g09
 
 # Check if the correct number of arguments was provided
@@ -11,16 +11,16 @@ if len(sys.argv) < 11:
     sys.exit(1)
 
 # Assign each argument to a variable, converting to the appropriate type
-N_anc = int(sys.argv[1])  # Ancestral population size
-N_main = int(sys.argv[2])  # Main population size
-N_ghost = int(sys.argv[3])  # Ghost population size
-tau = int(sys.argv[4])  # Split time
-m = float(sys.argv[5])  # Migration rate
-mu = float(sys.argv[6])  # Mutation rate
-rho = float(sys.argv[7])  # Recombination rate
-chrlen = float(sys.argv[8]) # Chromosome length, converted to float
-samples_size = int(sys.argv[9]) # Number of samples, converted to int
-sim_id = sys.argv[10]  # Simulation identifier, kept as string
+N_anc = int(sys.argv[1])  # Ancestral population size, 10000
+N_main = int(sys.argv[2])  # Main population size, 10000
+N_ghost = int(sys.argv[3])  # Ghost population size, 10000
+tau = int(sys.argv[4])  # Split time, 5000
+m = float(sys.argv[5])  # Migration rate,  0.029 
+mu = float(sys.argv[6])  # Mutation rate, 2e-8
+rho = float(sys.argv[7])  # Recombination rate, 1e-8 
+chrlen = float(sys.argv[8]) # Chromosome length, converted to float, 1e4
+samples_size = int(sys.argv[9]) # Number of samples, converted to int, 10
+sim_id = sys.argv[10]  # Simulation identifier, kept as string, 1
 
 # Print the input parameters for verification
 print(f"Parameters: N_anc={N_anc}, N_main={N_main}, N_ghost={N_ghost}, tau={tau}, m={m}, mu={mu}, rho={rho}, chrlen={chrlen}, samples_size={samples_size}, sim_id={sim_id}")
