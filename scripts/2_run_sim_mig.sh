@@ -8,7 +8,7 @@ tau=5000
 m=0.029
 mu=2e-8
 rho=1e-8
-chrlen=1e4
+chrlen=1e7
 samples_size=10
 
 # Executa o script Python 100 vezes com IDs de simulação únicos
