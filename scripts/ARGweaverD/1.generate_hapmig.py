@@ -34,3 +34,4 @@ print(f"Hapmig file created: {output_file}")
 print("First 5 lines preview:")
 print("\n".join(hapmig_lines[:5]))
 
+
